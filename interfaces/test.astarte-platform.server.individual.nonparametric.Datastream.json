@@ -1,0 +1,16 @@
+{
+    "interface_name": "test.astarte-platform.server.individual.nonparametric.Datastream",
+    "version_major": 1,
+    "version_minor": 0,
+    "type": "datastream",
+    "ownership": "server",
+    "description": "A server-owned datastream interface with individual aggregation and plain endpoint.",
+    "mappings": [
+        {
+            "endpoint": "/the/value",
+            "type": "double",
+            "explicit_timestamp": true
+        }
+    ]
+}
+

@@ -1,0 +1,15 @@
+{
+    "interface_name": "test.astarte-platform.device.individual.nonparametric.Properties",
+    "version_major": 1,
+    "version_minor": 0,
+    "type": "properties",
+    "ownership": "device",
+    "description": "A device-owned properties interface with individual aggregation and plain endpoint.",
+    "mappings": [
+        {
+            "endpoint": "/the/value",
+            "type": "double"
+        }
+    ]
+}
+
