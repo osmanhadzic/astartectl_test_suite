@@ -1,0 +1,28 @@
+[project]
+name = "astartectl_tests"
+version = "0.1.0"
+description = "This project tests astartectl functionalities"
+authors = [
+    {name = "Mirza Hodzic", email = "mirza.hodzic@secomind.com"},
+    {name = "Osman Hadzic", email = "osman.hadzic@secomind.com"},
+    {name = "Nedim Tokic", email = "nedim.tokic@secomind.com"}
+]
+dependencies = [
+    "pytest>=7.0.0",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.optional-dependencies]
+static = ["black", "pylint"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line-length = 88

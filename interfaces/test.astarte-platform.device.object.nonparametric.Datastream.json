@@ -1,0 +1,21 @@
+{
+    "interface_name": "test.astarte-platform.device.object.nonparametric.Datastream",
+    "version_major": 1,
+    "version_minor": 0,
+    "type": "datastream",
+    "ownership": "device",
+    "aggregation": "object",
+    "description": "A device-owned datastream interface with object aggregation and plain endpoint.",
+    "mappings": [
+        {
+            "endpoint": "/the/value",
+            "type": "double",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/the/otherValue",
+            "type": "double",
+            "explicit_timestamp": true
+        }
+    ]
+}

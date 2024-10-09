@@ -1,0 +1,14 @@
+{
+    "interface_name": "test.astarte-platform.server.individual.parametric.Properties",
+    "version_major": 1,
+    "version_minor": 0,
+    "type": "properties",
+    "ownership": "server",
+    "description": "A server-owned properties interface with individual aggregation and parametric endpoint.",
+    "mappings": [
+        {
+            "endpoint": "/%{parameter}/value",
+            "type": "double"
+        }
+    ]
+}
