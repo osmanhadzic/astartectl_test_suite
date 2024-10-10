@@ -1,0 +1,140 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - 'main'
+  pull_request:
+
+jobs:
+  astarte-ctl-test:
+    name: Astartectl Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Utility tool for later
+      - name: Setup jq
+        uses: dcarbone/install-jq-action@v2
+      - name: Check jq
+        run: |
+          which jq
+          jq --version
+
+      - name: Create Astarte Cluster
+        id: astarte
+        uses: astarte-platform/astarte-cluster-action@v1
+        with:
+          astarte_version: "1.1.1"
+          astartectl_version: "24.5.2"
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - name: Install interface
+        run: |
+          astartectl realm-management interfaces sync $GITHUB_WORKSPACE/interfaces/*.json --non-interactive
+          astartectl realm-management interfaces ls
+    
+       # This will handle load balancing
+      - name: Install MetalLB
+        run: |
+         helm repo add bitnami https://charts.bitnami.com/bitnami
+         helm repo update
+         helm install metallb bitnami/metallb -n metallb-system --version 4.16.1  --create-namespace
+     # Give some time to metallb pods to get ready
+      - name: Sleep it off
+        run: sleep 60s
+        id: sleep
+      # Get a list of IPs from which we will choose the one assigned to Scylla
+      - name: Get network address list
+        id: lb-addresses
+        run: |
+          echo "LB_ADDRESSES=$(docker network inspect kind | jq --raw-output 'first | .IPAM.Config | .[] | .Subnet' | awk '{match($0,/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/); ip = substr($0,RSTART,RLENGTH); print ip}' | tr -d '\n' | sed 's#\(.*\)#\1/27\n#')" >> $GITHUB_OUTPUT
+      # Configure metallb
+      - name: Configure MetalLB
+        if: steps.sleep.outcome == 'success'
+        id: metallb-conf
+        env: 
+          LB_ADDRESSES: ${{ steps.lb-addresses.outputs.LB_ADDRESSES }}
+        run: |
+          echo "---
+          apiVersion: metallb.io/v1beta1
+          kind: IPAddressPool
+          metadata:
+            name: demo-pool
+            namespace: metallb-system
+          spec:
+            addresses:
+            - $LB_ADDRESSES
+          ---
+          apiVersion: metallb.io/v1beta1
+          kind: L2Advertisement
+          metadata:
+            name: demo-advertisement
+            namespace: metallb-system
+          spec:
+            ipAddressPools:
+            - demo-pool
+          " | \
+          kubectl apply -f -
+      # Expose Scylla
+      - name: Expose Scylla with a LoadBalancer
+        if: steps.metallb-conf.outcome == 'success'
+        id: scylla-svc
+        run: kubectl expose svc -n astarte astarte-cassandra --target-port=9042 --name=astarte-cassandra-lb --type=LoadBalancer
+      - name: Retrieve Scylla connection info
+        if: steps.scylla-svc.outcome == 'success'
+        run: echo "Scylla is reachable at $(kubectl get svc -n astarte astarte-cassandra-lb -o=jsonpath='{.status.loadBalancer.ingress[0].ip}'):9042"
+
+      - name: Checkout Astarte Import
+        uses: actions/checkout@v2
+        with:
+          repository: astarte-platform/astarte
+          path: astarte_import
+          ref: master
+
+      - name: Setup Elixir
+        uses: erlef/setup-beam@v1
+        with:
+          elixir-version: '1.15'
+          otp-version: '25.0'
+
+      - name: Install dependencies for Astarte Import
+        run: |
+          cd astarte_import/tools/astarte_import
+          mix deps.get
+
+      - name: Build Astarte Import
+        run: |
+          cd astarte_import/tools/astarte_import
+          IP=$(kubectl get svc -n astarte astarte-cassandra-lb -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
+          export CASSANDRA_DB_HOST=$IP
+          export CASSANDRA_DB_PORT=9042
+          MIX_ENV=prod mix do compile, release
+
+      - name: Run Astarte Import
+        run: |
+          cd astarte_import/tools/astarte_import/_build/prod/rel/astarte_import/bin
+          ./astarte_import eval "Mix.Tasks.Astarte.Import.run [\"test\",\"${{ github.workspace }}/import.xml\"]"
+
+      - name: Setup ENV
+        run: |
+          echo "E2E_REALM=test" >> $GITHUB_ENV
+          echo "E2E_API_URL=https://api.autotest.astarte-platform.org" >> $GITHUB_ENV
+          TOKEN=$(astartectl utils gen-jwt all-realm-apis)
+          echo "E2E_JWT=$TOKEN" >> $GITHUB_ENV
+          echo "E2E_DEVICE_TEST_1=ogmcilZpRDeDWwuNfJr0yA" >> $GITHUB_ENV
+
+      - name: Setup python 
+        uses: actions/setup-python@v2
+        with: 
+          python-version: '3.12'
+
+      - name: Install dependencies    
+        shell: bash
+        run: pip install -e ./tests 
+
+      - name: Run tests 
+        shell: bash
+        run: ./test.sh

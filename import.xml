@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<astarte>
+    <devices>
+		<device device_id="ogmcilZpRDeDWwuNfJr0yA">
+			<protocol revision="0" pending_empty_cache="false"/>
+            <registration secret_bcrypt_hash="$2b$12$K70soCXARDWyhtUO62a0AuZpA3XBVMLsOZTQYm7GIFU0q/sdyLyui" first_registration="2024-09-03T10:33:51.228Z"/>
+            <credentials inhibit_request="false" cert_serial="355697894897601586453171396094096912541010422089" cert_aki="6d88d0f4e2d5bbc0bbbc04d394f684e7d05d383b" first_credentials_request="2024-09-01 07:41:22.849081Z" last_credentials_request_ip="172.18.0.3"/>
+            <stats total_received_msgs="600" total_received_bytes="240036" last_connection="2024-09-03T11:07:48.768Z" last_disconnection="2024-09-03T11:31:58.845Z" last_seen_ip="172.18.0.3"/>
+			<interfaces>
+				<interface name="test.astarte-platform.server.individual.parametric.Properties" major_version="1" minor_version="0" active="true">
+                    <property path="/a/value" reception_timestamp="2024-09-04T11:31:36.956Z">44.0</property>
+                </interface> 
+				<interface name="test.astarte-platform.server.individual.parametric.Datastream" major_version="1" minor_version="0" active="true">
+					<datastream path="/a/value">
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">42</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">43</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">44</value>
+                    </datastream>
+                    <datastream path="/another/value">
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">44</value>
+                    </datastream>
+				</interface>
+				<interface name="test.astarte-platform.server.individual.nonparametric.Properties" major_version="1" minor_version="0" active="true">
+                    <property path="/the/value" reception_timestamp="2024-09-04T11:31:36.956Z">44.0</property>
+                </interface>
+				<interface name="test.astarte-platform.server.individual.nonparametric.Datastream" major_version="1" minor_version="0" active="true">
+					<datastream path="/the/value">
+						<value reception_timestamp="2024-09-04T11:31:36.956Z">42</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">43</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">44</value>
+					</datastream>
+				</interface>
+				<interface name="test.astarte-platform.device.object.parametric.Datastream" major_version="1" minor_version="0" active="true">
+					<datastream path="/a">
+                        <object reception_timestamp="2024-09-04T11:31:36.956Z">
+                            <item name="/value">42</item>
+                            <item name="/otherValue">42</item>
+                        </object>
+                        <object reception_timestamp="2024-09-04T11:32:36.956Z">
+                            <item name="/value">43</item>
+                            <item name="/otherValue">43</item>
+                        </object>
+                        <object reception_timestamp="2024-09-04T11:33:36.956Z">
+                            <item name="/value">44</item>
+                            <item name="/otherValue">44</item>
+                        </object>
+                    </datastream>
+                    <datastream path="/another">
+                        <object reception_timestamp="2024-09-04T11:31:36.956Z">
+                            <item name="/value">42</item>
+                            <item name="/otherValue">42</item>
+                        </object>
+                        <object reception_timestamp="2024-09-04T11:32:36.956Z">
+                            <item name="/value">43</item>
+                            <item name="/otherValue">43</item>
+                        </object>
+                        <object reception_timestamp="2024-09-04T11:33:36.956Z">
+                            <item name="/value">44</item>
+                            <item name="/otherValue">44</item>
+                        </object>
+                    </datastream>
+				</interface>
+				<interface name="test.astarte-platform.device.object.nonparametric.Datastream" major_version="1" minor_version="0" active="true">
+					<datastream path="/the">
+                        <object reception_timestamp="2024-09-04T11:31:36.956Z">
+                            <item name="/value">42</item>
+                            <item name="/otherValue">42</item>
+                        </object>
+                        <object reception_timestamp="2024-09-04T11:32:36.956Z">
+                            <item name="/value">43</item>
+                            <item name="/otherValue">43</item>
+                        </object>
+                        <object reception_timestamp="2024-09-04T11:33:36.956Z">
+                            <item name="/value">44</item>
+                            <item name="/otherValue">44</item>
+                        </object>
+                    </datastream>
+				</interface>
+				<interface name="test.astarte-platform.device.individual.parametric.Properties" major_version="1" minor_version="0" active="true">
+                    <property path="/a/value" reception_timestamp="2024-09-04T11:31:36.956Z">44.0</property>
+                </interface>
+				<interface name="test.astarte-platform.device.individual.parametric.Datastream" major_version="1" minor_version="0" active="true">
+					<datastream path="/another/value">
+                        <value reception_timestamp="2024-09-04T10:58:48.086Z">42</value>
+                        <value reception_timestamp="2024-09-04T10:58:49.086Z">43</value>
+                        <value reception_timestamp="2024-09-04T10:58:50.086Z">44</value>
+                    </datastream>
+                    <datastream path="/a/value">
+                        <value reception_timestamp="2024-09-04T10:58:50.086Z">44</value>
+                    </datastream>
+				</interface>
+				<interface name="test.astarte-platform.device.individual.nonparametric.Properties" major_version="1" minor_version="0" active="true">
+					<property path="/the/value" reception_timestamp="2024-09-04T11:07:48.974Z" >44</property>
+				</interface>
+				<interface name="test.astarte-platform.device.individual.nonparametric.Datastream" major_version="1" minor_version="0" active="true">
+					<datastream path="/the/value">
+						<value reception_timestamp="2024-09-04T10:58:48.086Z">42</value>
+                        <value reception_timestamp="2024-09-04T10:58:49.086Z">43</value>
+                        <value reception_timestamp="2024-09-04T10:58:50.086Z">44</value>
+					</datastream>
+				</interface>
+			</interfaces>
+		</device>
+	</devices>
+</astarte>
