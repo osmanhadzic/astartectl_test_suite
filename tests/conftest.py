@@ -16,4 +16,4 @@ def astarte_env_vars():
         astarte_url and realm and jwt
     ), "Environment variables for Astarte setup are not properly configured."
 
-    return {"astarte_url": astarte_url, "realm": realm, "jwt": jwt}
+    return {"astarte_url": astarte_url, "realm": realm, "jwt": jwt, "device_test_1": device_test_1}
