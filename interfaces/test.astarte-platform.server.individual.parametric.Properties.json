@@ -7,8 +7,60 @@
     "description": "A server-owned properties interface with individual aggregation and parametric endpoint.",
     "mappings": [
         {
-            "endpoint": "/%{parameter}/value",
+            "endpoint": "/%{parameter}/boolean",
+            "type": "boolean"
+        },
+        {
+            "endpoint": "/%{parameter}/integer",
+            "type": "integer"
+        },
+        {
+            "endpoint": "/%{parameter}/double",
             "type": "double"
+        },
+        {
+            "endpoint": "/%{parameter}/longinteger",
+            "type": "longinteger"
+        },
+        {
+            "endpoint": "/%{parameter}/string",
+            "type": "string"
+        },
+        {
+            "endpoint": "/%{parameter}/binaryblob",
+            "type": "binaryblob"
+        },
+        {
+            "endpoint": "/%{parameter}/datetime",
+            "type": "datetime"
+        },
+        {
+            "endpoint": "/%{parameter}/doublearray",
+            "type": "doublearray"
+        },
+        {
+            "endpoint": "/%{parameter}/integerarray",
+            "type": "integerarray"
+        },
+        {
+            "endpoint": "/%{parameter}/booleanarray",
+            "type": "booleanarray"
+        },
+        {
+            "endpoint": "/%{parameter}/longintegerarray",
+            "type": "longintegerarray"
+        },
+        {
+            "endpoint": "/%{parameter}/stringarray",
+            "type": "stringarray"
+        },
+        {
+            "endpoint": "/%{parameter}/datetimearray",
+            "type": "datetimearray"
+        },
+        {
+            "endpoint": "/%{parameter}/binaryblobarray",
+            "type": "binaryblobarray"
         }
     ]
 }

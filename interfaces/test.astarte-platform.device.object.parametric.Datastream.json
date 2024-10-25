@@ -8,15 +8,74 @@
     "description": "A device-owned datastream interface with object aggregation and parametric endpoint.",
     "mappings": [
         {
-            "endpoint": "/%{parameter}/value",
+            "endpoint": "/%{parameter}/boolean",
+            "type": "boolean",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/integer",
+            "type": "integer",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/double",
             "type": "double",
             "explicit_timestamp": true
         },
         {
-            "endpoint": "/%{parameter}/otherValue",
-            "type": "double",
+            "endpoint": "/%{parameter}/longinteger",
+            "type": "longinteger",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/string",
+            "type": "string",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/binaryblob",
+            "type": "binaryblob",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/datetime",
+            "type": "datetime",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/doublearray",
+            "type": "doublearray",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/integerarray",
+            "type": "integerarray",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/booleanarray",
+            "type": "booleanarray",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/longintegerarray",
+            "type": "longintegerarray",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/stringarray",
+            "type": "stringarray",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/datetimearray",
+            "type": "datetimearray",
+            "explicit_timestamp": true
+        },
+        {
+            "endpoint": "/%{parameter}/binaryblobarray",
+            "type": "binaryblobarray",
             "explicit_timestamp": true
         }
     ]
 }
-

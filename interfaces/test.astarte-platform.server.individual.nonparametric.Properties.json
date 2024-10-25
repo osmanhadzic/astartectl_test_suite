@@ -7,8 +7,60 @@
     "description": "A server-owned properties interface with individual aggregation and plain endpoint.",
     "mappings": [
         {
-            "endpoint": "/the/value",
+            "endpoint": "/the/boolean",
+            "type": "boolean"
+        },
+        {
+            "endpoint": "/the/integer",
+            "type": "integer"
+        },
+        {
+            "endpoint": "/the/double",
             "type": "double"
+        },
+        {
+            "endpoint": "/the/longinteger",
+            "type": "longinteger"
+        },
+        {
+            "endpoint": "/the/string",
+            "type": "string"
+        },
+        {
+            "endpoint": "/the/binaryblob",
+            "type": "binaryblob"
+        },
+        {
+            "endpoint": "/the/datetime",
+            "type": "datetime"
+        },
+        {
+            "endpoint": "/the/doublearray",
+            "type": "doublearray"
+        },
+        {
+            "endpoint": "/the/integerarray",
+            "type": "integerarray"
+        },
+        {
+            "endpoint": "/the/booleanarray",
+            "type": "booleanarray"
+        },
+        {
+            "endpoint": "/the/longintegerarray",
+            "type": "longintegerarray"
+        },
+        {
+            "endpoint": "/the/stringarray",
+            "type": "stringarray"
+        },
+        {
+            "endpoint": "/the/datetimearray",
+            "type": "datetimearray"
+        },
+        {
+            "endpoint": "/the/binaryblobarray",
+            "type": "binaryblobarray"
         }
     ]
 }

@@ -111,6 +111,8 @@ jobs:
           IP=$(kubectl get svc -n astarte astarte-cassandra-lb -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
           export CASSANDRA_DB_HOST=$IP
           export CASSANDRA_DB_PORT=9042
+          export CASSANDRA_NODES=$IP:9042
+          echo "CASSANDRA_NODES=$CASSANDRA_NODES" >> $GITHUB_ENV
           MIX_ENV=prod mix do compile, release
 
       - name: Run Astarte Import
