@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2024 SECO Mind Srl
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <astarte>
     <devices>
 		<device device_id="ogmcilZpRDeDWwuNfJr0yA">
