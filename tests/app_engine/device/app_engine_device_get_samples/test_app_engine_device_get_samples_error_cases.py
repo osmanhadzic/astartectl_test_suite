@@ -36,7 +36,7 @@ def test_get_sample_data_for_nonexisting_device(astarte_env_vars):
     assert "Device not found" in sample_data_result.stderr
 
 
-def test_get_sample_data_for_nonexisting_interface(astarte_env_vars):
+def test_get_sample_data_for_existing_device(astarte_env_vars):
     device_id = astarte_env_vars["device_test_1"]
     astarte_url = astarte_env_vars["astarte_url"]
     realm = astarte_env_vars["realm"]

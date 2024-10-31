@@ -139,7 +139,11 @@ jobs:
 
       - name: Install dependencies    
         shell: bash
-        run: pip install -e ./tests 
+        run: pip install -e ./tests
+        
+      - name: Format check
+        shell: bash
+        run: python -m black -l 100 --diff --check tests/ 
 
       - name: Run tests 
         shell: bash
