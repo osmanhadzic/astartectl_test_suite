@@ -21,7 +21,7 @@ SPDX-License-Identifier: Apache-2.0
                     <property path="/a/longinteger" reception_timestamp="2024-09-04T11:31:36.956Z">123456789012345</property>
                     <property path="/a/string" reception_timestamp="2024-09-04T11:31:36.956Z">example string</property>
                     <property path="/a/binaryblob" reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</property>
-                    <property path="/a/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</property>
+                    <property path="/a/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</property>
                     <property path="/a/doublearray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>123.45</element>
                         <element>678.90</element>
@@ -43,8 +43,8 @@ SPDX-License-Identifier: Apache-2.0
                         <element>string2</element>
                     </property>
                     <property path="/a/datetimearray" reception_timestamp="2024-09-04T11:31:36.956Z">
-                        <element>2024-09-04T11:31:36.956Z</element>
-                        <element>2024-09-05T11:31:36.956Z</element>
+                        <element>2024-09-09T09:09:09.900Z</element>
+                        <element>2024-09-10T09:09:09.900Z</element>
                     </property>
                     <property path="/a/binaryblobarray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>aGVsbG8gd29ybGQ=</element>
@@ -71,7 +71,7 @@ SPDX-License-Identifier: Apache-2.0
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</value>
                     </datastream>
                     <datastream path="/a/datetime">
-                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</value>
                     </datastream>
                     <datastream path="/a/doublearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
@@ -105,8 +105,8 @@ SPDX-License-Identifier: Apache-2.0
                     </datastream>
                     <datastream path="/a/datetimearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
-                            <element>2024-09-04T11:31:36.956Z</element>
-                            <element>2024-09-05T11:31:36.956Z</element>
+                            <element>2024-09-09T09:09:09.900Z</element>
+                            <element>2024-09-10T09:09:09.900Z</element>
                         </value>
                     </datastream>
                     <datastream path="/a/binaryblobarray">
@@ -123,7 +123,7 @@ SPDX-License-Identifier: Apache-2.0
                     <property path="/the/longinteger" reception_timestamp="2024-09-04T11:31:36.956Z">123456789012345</property>
                     <property path="/the/string" reception_timestamp="2024-09-04T11:31:36.956Z">example string</property>
                     <property path="/the/binaryblob" reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</property>
-                    <property path="/the/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</property>
+                    <property path="/the/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</property>
                     <property path="/the/doublearray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>123.45</element>
                         <element>678.90</element>
@@ -145,8 +145,8 @@ SPDX-License-Identifier: Apache-2.0
                         <element>string2</element>
                     </property>
                     <property path="/the/datetimearray" reception_timestamp="2024-09-04T11:31:36.956Z">
-                        <element>2024-09-04T11:31:36.956Z</element>
-                        <element>2024-09-05T11:31:36.956Z</element>
+                        <element>2024-09-09T09:09:09.900Z</element>
+                        <element>2024-09-10T09:09:09.900Z</element>
                     </property>
                     <property path="/the/binaryblobarray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>aGVsbG8gd29ybGQ=</element>
@@ -173,7 +173,7 @@ SPDX-License-Identifier: Apache-2.0
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</value>
                     </datastream>
                     <datastream path="/the/datetime">
-                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</value>
                     </datastream>
                     <datastream path="/the/doublearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
@@ -207,8 +207,8 @@ SPDX-License-Identifier: Apache-2.0
                     </datastream>
                     <datastream path="/the/datetimearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
-                            <element>2024-09-04T11:31:36.956Z</element>
-                            <element>2024-09-05T11:31:36.956Z</element>
+                            <element>2024-09-09T09:09:09.900Z</element>
+                            <element>2024-09-10T09:09:09.900Z</element>
                         </value>
                     </datastream>
                     <datastream path="/the/binaryblobarray">
@@ -227,7 +227,7 @@ SPDX-License-Identifier: Apache-2.0
                             <item name="/longinteger">123456789012345</item>
                             <item name="/string">example string</item>
                             <item name="/binaryblob">aGVsbG8gd29ybGQ=</item>
-                            <item name="/datetime">2024-09-04T11:34:36.956Z</item>
+                            <item name="/datetime">2024-09-09T09:09:09.900Z</item>
                             <item name="/doublearray">
                                 <element>123.45</element>
                                 <element>678.90</element>
@@ -249,8 +249,8 @@ SPDX-License-Identifier: Apache-2.0
                                 <element>string2</element>
                             </item>
                             <item name="/datetimearray">
-                                <element>2024-09-04T11:34:36.956Z</element>
-                                <element>2024-09-05T11:34:36.956Z</element>
+                                <element>2024-09-09T09:09:09.900Z</element>
+                                <element>2024-09-10T09:09:09.900Z</element>
                             </item>
                             <item name="/binaryblobarray">
                                 <element>aGVsbG8gd29ybGQ=</element>
@@ -267,7 +267,7 @@ SPDX-License-Identifier: Apache-2.0
                             <item name="/double">123.45</item>
                             <item name="/longinteger">123456789012345</item>
                             <item name="/string">example string</item>
-                            <item name="/datetime">2024-09-04T11:34:36.956Z</item>
+                            <item name="/datetime">2024-09-09T09:09:09.900Z</item>
                             <item name="/binaryblob">aGVsbG8gd29ybGQ=</item>
                             <item name="/doublearray">
                                 <element>123.45</element>
@@ -290,8 +290,8 @@ SPDX-License-Identifier: Apache-2.0
                                 <element>string2</element>
                             </item>
                             <item name="/datetimearray">
-                                <element>2024-09-04T11:34:36.956Z</element>
-                                <element>2024-09-05T11:34:36.956Z</element>
+                                <element>2024-09-09T09:09:09.900Z</element>
+                                <element>2024-09-10T09:09:09.900Z</element>
                             </item>
                             <item name="/binaryblobarray">
                                 <element>aGVsbG8gd29ybGQ=</element>
@@ -307,7 +307,7 @@ SPDX-License-Identifier: Apache-2.0
                     <property path="/a/longinteger" reception_timestamp="2024-09-04T11:31:36.956Z">123456789012345</property>
                     <property path="/a/string" reception_timestamp="2024-09-04T11:31:36.956Z">example string</property>
                     <property path="/a/binaryblob" reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</property>
-                    <property path="/a/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</property>
+                    <property path="/a/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</property>
                     <property path="/a/doublearray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>123.45</element>
                         <element>678.90</element>
@@ -329,8 +329,8 @@ SPDX-License-Identifier: Apache-2.0
                         <element>string2</element>
                     </property>
                     <property path="/a/datetimearray" reception_timestamp="2024-09-04T11:31:36.956Z">
-                        <element>2024-09-04T11:31:36.956Z</element>
-                        <element>2024-09-05T11:31:36.956Z</element>
+                        <element>2024-09-09T09:09:09.900Z</element>
+                        <element>2024-09-10T09:09:09.900Z</element>
                     </property>
                     <property path="/a/binaryblobarray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>aGVsbG8gd29ybGQ=</element>
@@ -357,7 +357,7 @@ SPDX-License-Identifier: Apache-2.0
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</value>
                     </datastream>
                     <datastream path="/a/datetime">
-                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</value>
                     </datastream>
                     <datastream path="/a/doublearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
@@ -391,8 +391,8 @@ SPDX-License-Identifier: Apache-2.0
                     </datastream>
                     <datastream path="/a/datetimearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
-                            <element>2024-09-04T11:31:36.956Z</element>
-                            <element>2024-09-05T11:31:36.956Z</element>
+                            <element>2024-09-09T09:09:09.900Z</element>
+                            <element>2024-09-10T09:09:09.900Z</element>
                         </value>
                     </datastream>
                     <datastream path="/a/binaryblobarray">
@@ -409,7 +409,7 @@ SPDX-License-Identifier: Apache-2.0
                     <property path="/the/longinteger" reception_timestamp="2024-09-04T11:31:36.956Z">123456789012345</property>
                     <property path="/the/string" reception_timestamp="2024-09-04T11:31:36.956Z">example string</property>
                     <property path="/the/binaryblob" reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</property>
-                    <property path="/the/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</property>
+                    <property path="/the/datetime" reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</property>
                     <property path="/the/doublearray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>123.45</element>
                         <element>678.90</element>
@@ -431,8 +431,8 @@ SPDX-License-Identifier: Apache-2.0
                         <element>string2</element>
                     </property>
                     <property path="/the/datetimearray" reception_timestamp="2024-09-04T11:31:36.956Z">
-                        <element>2024-09-04T11:31:36.956Z</element>
-                        <element>2024-09-05T11:31:36.956Z</element>
+                        <element>2024-09-09T09:09:09.900Z</element>
+                        <element>2024-09-10T09:09:09.900Z</element>
                     </property>
                     <property path="/the/binaryblobarray" reception_timestamp="2024-09-04T11:31:36.956Z">
                         <element>aGVsbG8gd29ybGQ=</element>
@@ -459,7 +459,7 @@ SPDX-License-Identifier: Apache-2.0
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">aGVsbG8gd29ybGQ=</value>
                     </datastream>
                     <datastream path="/the/datetime">
-                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-04T11:31:36.956Z</value>
+                        <value reception_timestamp="2024-09-04T11:31:36.956Z">2024-09-09T09:09:09.900Z</value>
                     </datastream>
                     <datastream path="/the/doublearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
@@ -493,8 +493,8 @@ SPDX-License-Identifier: Apache-2.0
                     </datastream>
                     <datastream path="/the/datetimearray">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">
-                            <element>2024-09-04T11:31:36.956Z</element>
-                            <element>2024-09-05T11:31:36.956Z</element>
+                            <element>2024-09-09T09:09:09.900Z</element>
+                            <element>2024-09-10T09:09:09.900Z</element>
                         </value>
                     </datastream>
                     <datastream path="/the/binaryblobarray">
