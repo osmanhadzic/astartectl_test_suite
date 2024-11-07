@@ -147,3 +147,71 @@ map_of_nonparams_json_data = {
     "/the/datetimearray": ["2024-09-09T09:09:09.900Z", "2024-09-10T09:09:09.900Z"],
     "/the/binaryblobarray": ["aGVsbG8gd29ybGQ=", "d29ybGQgaGVsbG8="],
 }
+
+list_of_keys = [
+    "binaryblob",
+    "binaryblobarray",
+    "boolean",
+    "booleanarray",
+    "datetime",
+    "datetimearray",
+    "double",
+    "doublearray",
+    "integer",
+    "integerarray",
+    "longinteger",
+    "longintegerarray",
+    "string",
+    "stringarray",
+]
+
+expected_output_object_csv = [
+    {"binaryblob": "aGVsbG8gd29ybGQ="},
+    {"binaryblobarray": "[aGVsbG8gd29ybGQ= d29ybGQgaGVsbG8=]"},
+    {"boolean": "true"},
+    {"booleanarray": "[true false]"},
+    {"datetime": "2024-09-09T09:09:09.900Z"},
+    {"datetimearray": "[2024-09-09T09:09:09.900Z 2024-09-10T09:09:09.900Z]"},
+    {"double": "123.45"},
+    {"doublearray": "[123.45 678.9]"},
+    {"integer": "44"},
+    {"integerarray": "[44 456]"},
+    {"longinteger": "123456789012345"},
+    {"longintegerarray": "[123456789012345 678901234567890]"},
+    {"string": "example string"},
+    {"stringarray": "[string1 string2]"},
+]
+
+map_of_nonparams_csv_data = {
+    "/the/boolean": "true",
+    "/the/integer": "44",
+    "/the/double": "123.45",
+    "/the/longinteger": "123456789012345",
+    "/the/string": "example string",
+    "/the/binaryblob": "aGVsbG8gd29ybGQ=",
+    "/the/datetime": "2024-09-09T09:09:09.900Z",
+    "/the/doublearray": "[123.45 678.9]",
+    "/the/integerarray": "[44 456]",
+    "/the/booleanarray": "[true false]",
+    "/the/longintegerarray": "[123456789012345 678901234567890]",
+    "/the/stringarray": "[string1 string2]",
+    "/the/datetimearray": "[2024-09-09T09:09:09.900Z 2024-09-10T09:09:09.900Z]",
+    "/the/binaryblobarray": "[aGVsbG8gd29ybGQ= d29ybGQgaGVsbG8=]",
+}
+
+map_of_params_csv_data = {
+    "/a/boolean": "true",
+    "/a/integer": "44",
+    "/a/double": "123.45",
+    "/a/longinteger": "123456789012345",
+    "/a/string": "example string",
+    "/a/binaryblob": "aGVsbG8gd29ybGQ=",
+    "/a/datetime": "2024-09-09T09:09:09.900Z",
+    "/a/doublearray": "[123.45 678.9]",
+    "/a/integerarray": "[44 456]",
+    "/a/booleanarray": "[true false]",
+    "/a/longintegerarray": "[123456789012345 678901234567890]",
+    "/a/stringarray": "[string1 string2]",
+    "/a/datetimearray": "[2024-09-09T09:09:09.900Z 2024-09-10T09:09:09.900Z]",
+    "/a/binaryblobarray": "[aGVsbG8gd29ybGQ= d29ybGQgaGVsbG8=]",
+}
