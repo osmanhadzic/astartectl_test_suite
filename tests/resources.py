@@ -215,3 +215,16 @@ map_of_params_csv_data = {
     "/a/datetimearray": "[2024-09-09T09:09:09.900Z 2024-09-10T09:09:09.900Z]",
     "/a/binaryblobarray": "[aGVsbG8gd29ybGQ= d29ybGQgaGVsbG8=]",
 }
+
+list_of_interface_names = [
+    "test.astarte-platform.device.individual.nonparametric.Datastream",
+    "test.astarte-platform.device.individual.nonparametric.Properties",
+    "test.astarte-platform.device.individual.parametric.Datastream",
+    "test.astarte-platform.device.individual.parametric.Properties",
+    "test.astarte-platform.device.object.nonparametric.Datastream",
+    "test.astarte-platform.device.object.parametric.Datastream",
+    "test.astarte-platform.server.individual.nonparametric.Datastream",
+    "test.astarte-platform.server.individual.nonparametric.Properties",
+    "test.astarte-platform.server.individual.parametric.Datastream",
+    "test.astarte-platform.server.individual.parametric.Properties",
+]
