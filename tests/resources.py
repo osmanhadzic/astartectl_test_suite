@@ -228,3 +228,10 @@ list_of_interface_names = [
     "test.astarte-platform.server.individual.parametric.Datastream",
     "test.astarte-platform.server.individual.parametric.Properties",
 ]
+
+list_of_attributes = {
+    "test_attribute1": "test_attribute1=attribute1",
+    "test_attribute2": "test_attribute2=attribute2",
+    "test_attribute3": "test_attribute3=attribute3",
+    "test_attribute4": "test_attribute4=attribute4",
+}
