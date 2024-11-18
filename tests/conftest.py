@@ -15,9 +15,10 @@ def astarte_env_vars():
     realm = os.environ.get("E2E_REALM")
     jwt = os.environ.get("E2E_JWT")
     device_test_1 = os.environ.get("E2E_DEVICE_TEST_1")
+    device_test_2 = os.environ.get("E2E_DEVICE_TEST_2")
 
     assert (
-        astarte_url and realm and jwt
+        astarte_url and realm and jwt and device_test_1 and device_test_2
     ), "Environment variables for Astarte setup are not properly configured."
 
     return {
@@ -25,4 +26,5 @@ def astarte_env_vars():
         "realm": realm,
         "jwt": jwt,
         "device_test_1": device_test_1,
+        "device_test_2": device_test_2,
     }
