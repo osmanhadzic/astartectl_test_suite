@@ -4,4 +4,5 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-pytest -v ./tests
+pytest -v ./tests/app_engine
+pytest -v ./tests/realm_management
