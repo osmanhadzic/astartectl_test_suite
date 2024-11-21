@@ -1,0 +1,18 @@
+{
+    "name": "test_trigger",
+    "action": {
+      "http_url": "http://localhost:4000",
+      "http_method": "post"
+    },
+    "simple_triggers": [
+      {
+        "type": "data_trigger",
+        "on": "incoming_data",
+        "interface_name": "test.astarte-platform.device.individual.nonparametric.Datastream",
+        "interface_major": 1,
+        "match_path": "/the/integer",
+        "value_match_operator": ">",
+        "known_value": 9
+      }
+    ]
+}

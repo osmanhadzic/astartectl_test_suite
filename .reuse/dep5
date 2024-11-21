@@ -10,3 +10,7 @@ License: CC0-1.0
 Files: tests/realm_management/test_interfaces/*
 Copyright: SECO Mind Srl
 License: CC0-1.0
+
+Files: tests/realm_management/test_triggers/*
+Copyright: SECO Mind Srl
+License: CC0-1.0
