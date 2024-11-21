@@ -107,5 +107,5 @@ def test_app_engine_stats_device(astarte_env_vars):
     ]
 
     sample_data_result = subprocess.run(arg_list, capture_output=True, text=True)
-    except_output = "{TotalDevices:1 ConnectedDevices:0}\n"
+    except_output = "{TotalDevices:2 ConnectedDevices:0}\n"
     assert sample_data_result.stdout == except_output

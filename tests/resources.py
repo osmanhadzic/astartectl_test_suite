@@ -235,3 +235,5 @@ list_of_attributes = {
     "test_attribute3": "test_attribute3=attribute3",
     "test_attribute4": "test_attribute4=attribute4",
 }
+
+mygroup = "test_group"

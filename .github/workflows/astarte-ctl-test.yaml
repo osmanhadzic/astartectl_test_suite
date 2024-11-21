@@ -131,6 +131,9 @@ jobs:
           TOKEN=$(astartectl utils gen-jwt all-realm-apis)
           echo "E2E_JWT=$TOKEN" >> $GITHUB_ENV
           echo "E2E_DEVICE_TEST_1=ogmcilZpRDeDWwuNfJr0yA" >> $GITHUB_ENV
+          DEVICE_TEST_2=$(astartectl utils device-id generate-random)
+          echo "E2E_DEVICE_TEST_2=$DEVICE_TEST_2" >> $GITHUB_ENV
+          astartectl pairing agent register --compact-output -- "$DEVICE_TEST_2"
 
       - name: Setup python 
         uses: actions/setup-python@v2
