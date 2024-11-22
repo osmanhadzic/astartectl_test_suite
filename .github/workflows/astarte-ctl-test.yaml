@@ -134,6 +134,8 @@ jobs:
           DEVICE_TEST_2=$(astartectl utils device-id generate-random)
           echo "E2E_DEVICE_TEST_2=$DEVICE_TEST_2" >> $GITHUB_ENV
           astartectl pairing agent register --compact-output -- "$DEVICE_TEST_2"
+          HOUSEKEEPING_TOKEN=$(astartectl utils gen-jwt housekeeping)
+          echo "E2E_HOUSEKEEPING_JWT=$HOUSEKEEPING_TOKEN" >> $GITHUB_ENV
 
       - name: Setup python 
         uses: actions/setup-python@v2

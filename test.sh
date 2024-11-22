@@ -8,3 +8,4 @@ pytest -v ./tests/utils
 pytest -v ./tests/app_engine
 pytest -v ./tests/realm_management
 pytest -v ./tests/pairing_agent
+pytest -v ./tests/housekeeping
