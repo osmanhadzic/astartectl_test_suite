@@ -33,4 +33,4 @@ profile = "black"
 line-length = 88
 
 [tool.setuptools]
-packages = ["app_engine", "realm_management", "utils"]
+packages = ["app_engine", "realm_management", "utils", "pairing_agent"]
