@@ -14,6 +14,88 @@ SPDX-License-Identifier: Apache-2.0
             <credentials inhibit_request="false" cert_serial="355697894897601586453171396094096912541010422089" cert_aki="6d88d0f4e2d5bbc0bbbc04d394f684e7d05d383b" first_credentials_request="2024-09-01 07:41:22.849081Z" last_credentials_request_ip="172.18.0.3"/>
             <stats total_received_msgs="600" total_received_bytes="240036" last_connection="2024-09-03T11:07:48.768Z" last_disconnection="2024-09-03T11:31:58.845Z" last_seen_ip="172.18.0.3"/>
 			<interfaces>
+                <interface name="test.astarte-platform.server.object.parametric.Datastream" major_version="1" minor_version="0" active="true">
+                    <datastream path="/a">
+                        <object reception_timestamp="2024-09-04T11:32:36.956Z">
+                            <item name="/boolean">true</item>
+                            <item name="/integer">44</item>
+                            <item name="/double">123.45</item>
+                            <item name="/longinteger">123456789012345</item>
+                            <item name="/string">example string</item>
+                            <item name="/binaryblob">aGVsbG8gd29ybGQ=</item>
+                            <item name="/datetime">2024-09-09T09:09:09.900Z</item>
+                            <item name="/doublearray">
+                                <element>123.45</element>
+                                <element>678.90</element>
+                            </item>
+                            <item name="/integerarray">
+                                <element>44</element>
+                                <element>456</element>
+                            </item>
+                            <item name="/booleanarray">
+                                <element>true</element>
+                                <element>false</element>
+                            </item>
+                            <item name="/longintegerarray">
+                                <element>123456789012345</element>
+                                <element>678901234567890</element>
+                            </item>
+                            <item name="/stringarray">
+                                <element>string1</element>
+                                <element>string2</element>
+                            </item>
+                            <item name="/datetimearray">
+                                <element>2024-09-09T09:09:09.900Z</element>
+                                <element>2024-09-10T09:09:09.900Z</element>
+                            </item>
+                            <item name="/binaryblobarray">
+                                <element>aGVsbG8gd29ybGQ=</element>
+                                <element>d29ybGQgaGVsbG8=</element>
+                            </item>
+                        </object>
+                    </datastream>
+                </interface>
+                <interface name="test.astarte-platform.server.object.nonparametric.Datastream" major_version="1" minor_version="0" active="true">
+                    <datastream path="/the">
+                        <object reception_timestamp="2024-09-04T11:32:36.956Z">
+                            <item name="/boolean">true</item>
+                            <item name="/integer">44</item>
+                            <item name="/double">123.45</item>
+                            <item name="/longinteger">123456789012345</item>
+                            <item name="/string">example string</item>
+                            <item name="/datetime">2024-09-09T09:09:09.900Z</item>
+                            <item name="/binaryblob">aGVsbG8gd29ybGQ=</item>
+                            <item name="/doublearray">
+                                <element>123.45</element>
+                                <element>678.90</element>
+                            </item>
+                            <item name="/integerarray">
+                                <element>44</element>
+                                <element>456</element>
+                            </item>
+                            <item name="/booleanarray">
+                                <element>true</element>
+                                <element>false</element>
+                            </item>
+                            <item name="/longintegerarray">
+                                <element>123456789012345</element>
+                                <element>678901234567890</element>
+                            </item>
+                            <item name="/stringarray">
+                                <element>string1</element>
+                                <element>string2</element>
+                            </item>
+                            <item name="/datetimearray">
+                                <element>2024-09-09T09:09:09.900Z</element>
+                                <element>2024-09-10T09:09:09.900Z</element>
+                            </item>
+                            <item name="/binaryblobarray">
+                                <element>aGVsbG8gd29ybGQ=</element>
+                                <element>d29ybGQgaGVsbG8=</element>
+                            </item>
+                        </object>
+                    </datastream>
+                </interface>
                 <interface name="test.astarte-platform.server.individual.parametric.Properties" major_version="1" minor_version="0" active="true">
                     <property path="/a/boolean" reception_timestamp="2024-09-04T11:31:36.956Z">true</property>
                     <property path="/a/integer" reception_timestamp="2024-09-04T11:31:36.956Z">44</property>
@@ -51,7 +133,7 @@ SPDX-License-Identifier: Apache-2.0
                         <element>d29ybGQgaGVsbG8=</element>
                     </property>
                 </interface>
-				 <interface name="test.astarte-platform.server.individual.parametric.Datastream" major_version="1" minor_version="0" active="true">
+				<interface name="test.astarte-platform.server.individual.parametric.Datastream" major_version="1" minor_version="0" active="true">
 					<datastream path="/a/boolean">
                         <value reception_timestamp="2024-09-04T11:31:36.956Z">true</value>
                     </datastream>
@@ -116,7 +198,7 @@ SPDX-License-Identifier: Apache-2.0
                         </value>
                     </datastream>
 				</interface>				
-               <interface name="test.astarte-platform.server.individual.nonparametric.Properties" major_version="1" minor_version="0" active="true">
+                <interface name="test.astarte-platform.server.individual.nonparametric.Properties" major_version="1" minor_version="0" active="true">
                     <property path="/the/boolean" reception_timestamp="2024-09-04T11:31:36.956Z">true</property>
                     <property path="/the/integer" reception_timestamp="2024-09-04T11:31:36.956Z">44</property>
                     <property path="/the/double" reception_timestamp="2024-09-04T11:31:36.956Z">123.45</property>
