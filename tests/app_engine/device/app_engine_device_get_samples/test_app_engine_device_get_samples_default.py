@@ -243,6 +243,70 @@ def test_get_sample_data_for_server_individual_nonparametric_datastream(astarte_
             assert sample_data_result.stdout[list_length] == map_of_nonparams_data[path]
 
 
+def test_get_sample_data_for_server_object_nonparametric_datastream(astarte_env_vars):
+    device_id = astarte_env_vars["device_test_1"]
+    astarte_url = astarte_env_vars["astarte_url"]
+    realm = astarte_env_vars["realm"]
+    jwt = astarte_env_vars["jwt"]
+
+    interface_name = "test.astarte-platform.server.object.nonparametric.Datastream"
+    path = "/the"
+
+    arg_list = [
+        "astartectl",
+        "appengine",
+        "devices",
+        "get-samples",
+        device_id,
+        interface_name,
+        path,
+        "-t",
+        jwt,
+        "-u",
+        astarte_url,
+        "-r",
+        realm,
+    ]
+    sample_data_result = subprocess.run(arg_list, capture_output=True, text=True)
+    sample_data_result.stdout = _remove_table_border(sample_data_result)
+
+    sample_data_result.stdout = _normalize_and_split(sample_data_result.stdout)
+
+    assert sample_data_result.stdout == expected_output_object
+
+
+def test_get_sample_data_for_server_object_parametric_datastream(astarte_env_vars):
+    device_id = astarte_env_vars["device_test_1"]
+    astarte_url = astarte_env_vars["astarte_url"]
+    realm = astarte_env_vars["realm"]
+    jwt = astarte_env_vars["jwt"]
+
+    interface_name = "test.astarte-platform.server.object.parametric.Datastream"
+    path = "/a"
+
+    arg_list = [
+        "astartectl",
+        "appengine",
+        "devices",
+        "get-samples",
+        device_id,
+        interface_name,
+        path,
+        "-t",
+        jwt,
+        "-u",
+        astarte_url,
+        "-r",
+        realm,
+    ]
+    sample_data_result = subprocess.run(arg_list, capture_output=True, text=True)
+    sample_data_result.stdout = _remove_table_border(sample_data_result)
+
+    sample_data_result.stdout = _normalize_and_split(sample_data_result.stdout)
+
+    assert sample_data_result.stdout == expected_output_object
+
+
 def _remove_table_border(table):
     table = table.stdout.replace("\n", "")
 
