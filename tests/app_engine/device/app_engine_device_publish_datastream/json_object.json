@@ -1,0 +1,16 @@
+{
+    "boolean": true,
+    "integer": 44,
+    "double": 123.45,
+    "longinteger": 123456789012345,
+    "string": "example string",
+    "binaryblob": "aGVsbG8gd29ybGQ=",
+    "datetime": "2024-09-09T09:09:09.900Z",
+    "doublearray": [123.45, 678.9],
+    "integerarray": [44, 456],
+    "booleanarray": [true, false],
+    "longintegerarray": [123456789012345, 678901234567890],
+    "stringarray": ["string1", "string2"],
+    "datetimearray": ["2024-09-09T09:09:09.900Z", "2024-09-10T09:09:09.900Z"],
+    "binaryblobarray": ["aGVsbG8gd29ybGQ=", "d29ybGQgaGVsbG8="]
+}
